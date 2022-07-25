@@ -11,5 +11,6 @@ The 8 queens problems proposes placing eight chess queens on an 8×8 chessboard 
 
 The script uses backingtrack to solve the problem.
 
-First checks if all queens are already on the board, if so the function returns True, as the board is already complete.
-If there are still queens left to be placed, it iterates through the board searching for a space where the next queen could be positioned, if the space is valid (this being if the queen placed there would not threaten another one) the queen is placed there, and the function is called again in a recursive manner.
+The solviong function first checks if all the queens are already on the board, if so the function returns True, as the board is already complete.
+If there are still queens left to be placed, it iterates through the board searching for a space where the next queen could be positioned, if the space is valid (this being if the queen there would not threaten another one) the queen is placed in that 'squere', and the function is called again in a recursive manner.
+This function returns False once it went though the entire board while there are less than 8 queens on it.
