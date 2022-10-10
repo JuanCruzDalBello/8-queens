@@ -73,21 +73,10 @@ def valid(board, position):     # position -> (x, y)
     return True
 
 
-def solve():
+def solve(board):
     """
     Solves the 8 queens board recursively, stops once all the queens are positioned on the board.
-    """
-    board = [
-        [0, 0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 0, 0, 0, 0, 0, 0]
-    ]
-    
+    """    
     if all_queens_placed(board):
         return True
     
@@ -105,10 +94,21 @@ def solve():
 
 
 def main():
+    board = [
+        [0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0]
+    ]
+
     print('\n-------- SOLUTION --------')
-    solve()
-    print_board(original_board)
-    print_queens_coordinates(original_board)
+    solve(board)
+    print_board(board)
+    print_queens_coordinates(board)
     input()
 
 
