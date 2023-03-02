@@ -111,8 +111,6 @@ def main():
     print_queens_coordinates(board)
     input()
 
-
-# ----------------------------------------------------
-
+    
 if __name__ == '__main__':
     main()
